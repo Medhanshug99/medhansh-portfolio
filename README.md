@@ -20,14 +20,33 @@ It showcases my projects, skills, and contact information with a real-time visit
 
 ## Tech Stack  
 
-- **React.js** (Frontend)
-- **Tailwind CSS** (Styling)
-- **Framer Motion** (Animations)
-- **React Icons** (Icons)
-- **EmailJS** (Contact form integration)
-- **React-Toastify** (Notifications)
-- **Neon Postgres** (Visitor counter database)
-- **Vercel Serverless Functions** (API)
+### Languages
+- JavaScript
+- TypeScript
+
+### Frontend
+- React.js & Next.js
+- HTML5 & CSS3
+- Tailwind CSS & Bootstrap
+- Framer Motion (Animations)
+- React Router
+- Shadcn UI
+- React Icons
+
+### Backend & Database
+- Node.js & Express.js
+- MongoDB & Mongoose
+- PostgreSQL & Prisma
+- Firebase
+- Neon Postgres (Visitor counter database)
+- Vercel Serverless Functions (API)
+
+### Tools & Utilities
+- Git & GitHub
+- Postman
+- VS Code
+- EmailJS (Contact form integration)
+- React-Toastify (Notifications)
 
 ---
 
