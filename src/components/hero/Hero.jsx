@@ -1,0 +1,164 @@
+import { motion } from "framer-motion";
+import { TypingText } from "../../ui/lightswind/typing-text";
+import { BsSend } from "react-icons/bs";
+import { FiFileText } from "react-icons/fi";
+import { HeroButton } from "./HeroBtn";
+import { SocialLinks } from "../../data/socialLinks";
+import { GrLocation } from "react-icons/gr";
+import { Tooltip } from "react-tooltip";
+
+const Hero = () => {
+  // FRAMER MOTION VARIANTS
+  const socialIconVariants = {
+    hover: {
+      scale: 1.2,
+      rotate: 5,
+      transition: { type: "spring", stiffness: 300 },
+    },
+    tap: { scale: 1 },
+  };
+  const Skill = ({ children }) => (
+    <span className="text-sm px-1.5 font-semibold border-[1px] border-neutral-500/70 border-dashed rounded-md bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white">
+      {children}
+    </span>
+  );
+
+  return (
+    <div
+      id="home"
+      className="mt-18 mb-16 flex flex-col justify-center md:gap-5 text-gray-800 dark:text-gray-200"
+    >
+      {/* Header Image and Quote*/}
+      <div className="relative">
+        <img
+          src="/header.jpg"
+          alt="header image"
+          className="h-[180px] sm:h-[270px] w-full object-cover"
+        />
+        <div className="absolute inset-0 flex items-center justify-center px-4">
+          <p className="text-white text-base sm:text-xl italic font-logo text-center">
+            If it was easy, anyone could have done it.
+          </p>
+        </div>
+      </div>
+
+      {/* Profile Image && Status*/}
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="relative -mt-16 md:-mt-20 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full z-20"
+      >
+        {/* Light Mode Hero */}
+        <img
+          className="dark:hidden w-28 md:w-32 rounded-full transition-all duration-300 ease-in-out bg-sky-200 hover:scale-105 cursor-pointer"
+          src="/hero-light.png"
+        />
+        {/* Dark Mode Hero */}
+        <img
+          className="hidden dark:inline-block w-28 md:w-32 rounded-full transition-all duration-300 ease-in-out bg-purple-900/40 hover:scale-105 cursor-pointer shadow-[0_0_15px_rgba(168,85,247,0.4)]"
+          src="/hero-dark.png"
+        />
+        <span
+          data-tooltip-id="status"
+          data-tooltip-content="Open to new freelance projects and collaborations"
+          className="absolute right-2 top-21 md:right-2.5 md:top-24 h-3 w-3 rounded-full border border-neutral-700 bg-emerald-400 glow-green animate-pulse"
+        ></span>
+        <Tooltip
+          id="status"
+          place="right"
+          className="!px-2.5 !py-1 !text-sm !rounded-lg !dark:bg-white !dark:text-black !max-w-48 z-50"
+        />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-start md:text-start px-4 md:px-8"
+      >
+        {/* TITLE and DESCRIPTION */}
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white">
+          Hey, I'm Medhansh 👋 -{" "}
+          <TypingText
+            duration={2}
+            align="center"
+            className="text-neutral-500 dark:text-neutral-400"
+          >
+            A Full Stack developer.
+          </TypingText>
+        </h1>
+        <p className="mt-3 font-medium text-[17px] text-gray-700 dark:text-gray-400 ">
+          I build scalable and efficient web applications from frontend to
+          backend.
+          <br />I specialize in <Skill>Typescript</Skill> ,{" "}
+          <Skill>Next.js</Skill> , <Skill>MERN</Skill> stack ,{" "}
+          <Skill>PostgreSQL</Skill> and many other technologies for creating
+          full-stack web applications.
+        </p>
+        <p className="mt-3 font-medium text-[17px] text-gray-700 dark:text-gray-400 ">
+          Full-stack by skill, but obsessed with learning new skills and I love
+          to play{" "}
+          <a
+            target="_blank"
+            className="text-sm px-1.5 font-semibold border-[1px] border-neutral-500/70 border-dashed rounded-md bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white cursor-pointer"
+          >
+            chess
+          </a>{" "}
+          .
+        </p>
+
+        {/* Location and Socials */}
+        <div className="mt-4 flex justify-between items-center text-sm md:text-base">
+          <span className="flex text-gray-800 dark:text-gray-400">
+            <GrLocation className="w-5 h-5" />
+            &nbsp;Ranchi, India.
+          </span>
+
+          {/* Social Links Section */}
+          <div className="flex gap-2 md:gap-3 md:mr-12 text-gray-700 dark:text-gray-400">
+            {SocialLinks.map((social) => {
+              return (
+                <motion.a
+                  key={social.label}
+                  variants={socialIconVariants}
+                  whileHover="hover"
+                  whileTap="tap"
+                  className={`flex items-center font-medium text-gray-700 dark:text-white text-xl md:text-2xl transition-colors duration-300 ${social.hoverColor}`}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-tooltip-id="social-tooltip"
+                  data-tooltip-content={social.label}
+                >
+                  {social.icon}
+                </motion.a>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* RESUME and GET-IN-TOUCH BUTTONS */}
+        <div className="mt-4 md:ml-0 flex gap-4">
+          <HeroButton
+            link={
+              "https://drive.google.com/file/d/1ERJoOGS2tOHmjkz0FkrfU0ugP4EKEnoj/view?usp=drive_link"
+            }
+            target={"_blank"}
+            icon={<FiFileText />}
+            title={"Resume"}
+          />
+          <HeroButton
+            link={"/#contact"}
+            target={""}
+            icon={<BsSend />}
+            title={"Get in touch"}
+          />
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+export default Hero;
