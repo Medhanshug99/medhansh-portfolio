@@ -3,8 +3,31 @@ import digitalPersona from "../assets/projects/digitalPersona.png";
 import interactionTracker from "../assets/projects/interactionTracker.png";
 import focusFlowTimer from "../assets/projects/focusFlowTimer.png";
 import currencyConverter from "../assets/projects/currencyConverter.png";
+import chessCraft from "../assets/projects/Chess.png";
+import miniCrm from "../assets/projects/MiniCrm.png";
+import urbanRoastCafe from "../assets/projects/UrbanRoastCafe.png";
 
 export const projectsData = [
+  {
+    title: "ChessCraft",
+    description: "A clean, modern web-based chess application built with React and TypeScript. The computer opponent runs a custom chess engine directly in your browser using a standard Minimax algorithm with Alpha-Beta pruning.",
+    image: chessCraft,
+    tags: ["TypeScript", "C++", "CSS", "CMake", "HTML", "JavaScript"],
+    liveUrl: "https://vite-chess.vercel.app/",
+    githubUrl: "https://github.com/Medhanshug99/chess-web",
+    category: "frontend",
+    features: [
+      "Custom browser-based chess engine",
+      "Piece-Square Tables (PSTs) for positional evaluation",
+      "Move Ordering (MVV-LVA)",
+      "Quiescence Search"
+    ],
+    whatILearned: [
+      "Implementing complex game logic and AI algorithms in TypeScript",
+      "Optimizing search trees using Alpha-Beta pruning",
+      "Preparing architecture for future WebAssembly (WASM) integration"
+    ]
+  },
   {
     title: "Sort Simulator",
     description: "Sort Simulator is a web application that helps users understand different sorting algorithms by visualizing their execution. It supports multiple sorting algorithms including Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort. Users can customize array size, generation speed, and view step-by-step visualizations along with performance metrics.",
@@ -27,6 +50,47 @@ export const projectsData = [
       "Managing complex React state for visualizations",
       "Deep understanding of sorting algorithms (Bubble, Merge, Quick, etc.)",
       "Optimizing rendering performance during fast animations"
+    ]
+  },
+  {
+    title: "Urban Roast Café",
+    description: "A full-stack (MERN) web application built for a boutique café. This project features a completely custom, recruiter-grade React frontend and a secure Node.js/Express backend.",
+    image: urbanRoastCafe,
+    tags: ["React", "Vite", "Node.js", "Express", "MongoDB", "Framer Motion"],
+    liveUrl: "https://urban-roast-cafe-liart.vercel.app/",
+    githubUrl: "https://github.com/Medhanshug99",
+    category: "full-stack",
+    features: [
+      "Modern, editorial, mobile-first responsive design",
+      "Dynamic Menu fetched from MongoDB with instant client-side category filtering",
+      "Working Contact Form that saves messages and emails the admin",
+      "Secure Admin Panel with JWT authentication",
+      "Menu Manager to toggle item availability"
+    ],
+    whatILearned: [
+      "Building a custom React frontend without generic UI frameworks",
+      "Integrating Framer Motion for custom animations",
+      "Setting up Nodemailer for backend email functionality"
+    ]
+  },
+  {
+    title: "Mini CRM",
+    description: "A lightweight, modern Client Relationship Management (CRM) system built to handle lead generation and tracking. Includes a public lead form, admin dashboard, lead tracking capabilities, dark mode support, and high-level analytics.",
+    image: miniCrm,
+    tags: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT"],
+    liveUrl: "https://mini-crm-mern-theta.vercel.app/",
+    githubUrl: "https://github.com/Medhanshug99/FUTURE_FS_02",
+    category: "full-stack",
+    features: [
+      "Public lead generation form",
+      "Secure admin dashboard with JWT authentication",
+      "Lead tracking with status updates and internal notes",
+      "Analytics dashboard for tracking conversion metrics"
+    ],
+    whatILearned: [
+      "Building a full-stack MERN application",
+      "Implementing secure authentication using JWT and bcrypt",
+      "Designing responsive interfaces with dark mode support"
     ]
   },
   {
