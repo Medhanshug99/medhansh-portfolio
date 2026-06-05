@@ -6,8 +6,50 @@ import currencyConverter from "../assets/projects/currencyConverter.png";
 import chessCraft from "../assets/projects/Chess.png";
 import miniCrm from "../assets/projects/MiniCrm.png";
 import urbanRoastCafe from "../assets/projects/UrbanRoastCafe.png";
+import docuparseAi from "../assets/projects/docuparseAi.png";
+import propPredict from "../assets/projects/propPredict.png";
 
 export const projectsData = [
+  {
+    title: "DocuParse AI",
+    description: "DocuParse AI is a full-stack intelligent document processing platform. Users upload invoice images, and the system uses a fine-tuned LayoutLMv3 transformer model backed by EasyOCR to automatically extract structured fields. Features include confidence scoring, a human-in-the-loop review interface, and export to JSON/Excel.",
+    image: docuparseAi,
+    tags: ["React", "Tailwind CSS", "Node.js", "PostgreSQL", "FastAPI", "PyTorch", "BullMQ"],
+    liveUrl: "https://docuparse-ai.vercel.app/",
+    githubUrl: "https://github.com/Medhanshug99/docuparse-ai",
+    category: "full-stack",
+    features: [
+      "Automated invoice data extraction using LayoutLMv3 and EasyOCR",
+      "Asynchronous background job queue with BullMQ and Redis",
+      "Human-in-the-loop review interface with confidence scoring",
+      "Export extracted data to JSON and Excel formats"
+    ],
+    whatILearned: [
+      "Decoupling heavy ML workloads from web servers using a microservice architecture",
+      "Managing asynchronous job queues using BullMQ and Redis",
+      "Implementing strict type-safety with Zod across frontend and backend"
+    ]
+  },
+  {
+    title: "PropPredict - Real Estate Predictor",
+    description: "A full-stack web application that predicts real estate prices and recommends properties based on user preferences. Features a modern dashboard, a custom machine learning pipeline, and smart property recommendations.",
+    image: propPredict,
+    tags: ["React", "TypeScript", "Tailwind CSS", "FastAPI", "Scikit-Learn", "PostgreSQL", "Docker"],
+    liveUrl: "https://repropprice.vercel.app/",
+    githubUrl: "https://github.com/Medhanshug99/Real-Estate-Price-Predictor",
+    category: "full-stack",
+    features: [
+      "Instant ML-driven real estate price estimation",
+      "Smart property recommendations based on budget and location",
+      "Automated ML pipeline for data cleaning and model training",
+      "Secure backend with JWT-based role management"
+    ],
+    whatILearned: [
+      "Building and integrating a custom machine learning pipeline into a web application",
+      "Containerizing full-stack applications with Docker and Docker Compose",
+      "Developing a modular REST API using FastAPI and SQLAlchemy"
+    ]
+  },
   {
     title: "ChessCraft",
     description: "A clean, modern web-based chess application built with React and TypeScript. The computer opponent runs a custom chess engine directly in your browser using a standard Minimax algorithm with Alpha-Beta pruning.",
