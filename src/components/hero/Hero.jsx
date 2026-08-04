@@ -62,7 +62,7 @@ const Hero = () => {
         />
         <span
           data-tooltip-id="status"
-          data-tooltip-content="Open to new freelance projects and collaborations"
+          data-tooltip-content="Open to full-time SWE/Full Stack roles"
           className="absolute right-2 top-21 md:right-2.5 md:top-24 h-3 w-3 rounded-full border border-neutral-700 bg-emerald-400 glow-green animate-pulse"
         ></span>
         <Tooltip
@@ -90,25 +90,10 @@ const Hero = () => {
           </TypingText>
         </h1>
         <p className="mt-3 font-medium text-[17px] text-gray-700 dark:text-gray-400 ">
-          I build scalable and efficient web applications from frontend to
-          backend.
-          <br />I specialize in <Skill>Typescript</Skill> ,{" "}
-          <Skill>Next.js</Skill> , <Skill>MERN</Skill> stack ,{" "}
-          <Skill>PostgreSQL</Skill> and many other technologies for creating
-          full-stack web applications.
+          I build AI-integrated web applications that solve real problems, not just demo well. That's meant designing a document parsing engine with LayoutLMv3 and BullMQ to cut manual review time, and engineering a custom Alpha-Beta pruning chess AI from scratch because I wanted to understand search algorithms at a deeper level than a tutorial could teach me.
         </p>
         <p className="mt-3 font-medium text-[17px] text-gray-700 dark:text-gray-400 ">
-          Full-stack by skill, but obsessed with learning new skills and I love
-          to play{" "}
-          <a
-            href="https://vite-chess.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm px-1.5 font-semibold border-[1px] border-neutral-500/70 border-dashed rounded-md bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white cursor-pointer"
-          >
-            chess
-          </a>{" "}
-          .
+          I care about system architecture, performance under load, and shipping things that hold up outside a sandbox. Currently looking for full-time Full Stack or SWE roles where I can work on problems that are actually hard.
         </p>
 
         {/* Location and Socials */}
