@@ -30,7 +30,7 @@ const Contact = () => {
           Get In Touch!
         </h2>
         <p className="mt-2 text-lg font-semibold text-gray-800 dark:text-gray-300">
-          Have a project in mind or just want to say hi? I'd love to hear from
+          Hiring, collaborating, or just want to connect? I'd love to hear from
           you.
         </p>
       </motion.div>

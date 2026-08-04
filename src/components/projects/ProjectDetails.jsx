@@ -11,17 +11,31 @@ const ProjectDetails = ({ project = {} }) => {
     whatILearned = [],
     liveUrl = "",
     githubUrl = "",
+    screenshots = [],
   } = project;
 
   return (
     <div className="space-y-6">
       {/* Main Image */}
-      <div className="w-full">
+      <div className="w-full space-y-4">
         <img
           src={image}
           alt={title}
           className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md"
         />
+        {/* Additional Screenshots / Diagrams */}
+        {screenshots && screenshots.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {screenshots.map((shot, idx) => (
+              <img
+                key={idx}
+                src={shot}
+                alt={`${title} screenshot ${idx + 1}`}
+                className="w-full h-auto max-h-64 object-cover rounded-lg shadow-md border border-neutral-200 dark:border-neutral-800"
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Description */}

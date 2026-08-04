@@ -4,7 +4,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-    font-family: "Nunito", "League Spartan";
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 @layer utilities {

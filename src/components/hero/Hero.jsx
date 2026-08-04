@@ -28,18 +28,13 @@ const Hero = () => {
       id="home"
       className="mt-18 mb-16 flex flex-col justify-center md:gap-5 text-gray-800 dark:text-gray-200"
     >
-      {/* Header Image and Quote*/}
+      {/* Header Image */}
       <div className="relative">
         <img
           src="/header.jpg"
           alt="header image"
           className="h-[180px] sm:h-[270px] w-full object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center px-4">
-          <p className="text-white text-base sm:text-xl italic font-logo text-center">
-            If it was easy, anyone could have done it.
-          </p>
-        </div>
       </div>
 
       {/* Profile Image && Status*/}
