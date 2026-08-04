@@ -21,8 +21,10 @@ const Projects = () => {
     "in-progress": "in-progress",
   };
 
-  // Filter projects based on selected category
-  const filteredProjects = projectsData.filter((project) => {
+  // Filter out hidden projects first, then apply category filter
+  const visibleProjects = projectsData.filter((p) => !p.hidden);
+
+  const filteredProjects = visibleProjects.filter((project) => {
     if (selectedCategory === "all") return true;
     return project.category === categoryMap[selectedCategory];
   });
@@ -53,7 +55,7 @@ const Projects = () => {
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-10">
-        {projectsData.slice(0, 4).map((project, index) => (
+        {visibleProjects.slice(0, 4).map((project, index) => (
           <div key={index}>
             <ProjectCard project={project} index={index} />
           </div>

@@ -101,7 +101,9 @@ const Hero = () => {
           Full-stack by skill, but obsessed with learning new skills and I love
           to play{" "}
           <a
+            href="https://vite-chess.vercel.app/"
             target="_blank"
+            rel="noopener noreferrer"
             className="text-sm px-1.5 font-semibold border-[1px] border-neutral-500/70 border-dashed rounded-md bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white cursor-pointer"
           >
             chess
@@ -142,9 +144,7 @@ const Hero = () => {
         {/* RESUME and GET-IN-TOUCH BUTTONS */}
         <div className="mt-4 md:ml-0 flex gap-4">
           <HeroButton
-            link={
-              "https://drive.google.com/file/d/1ERJoOGS2tOHmjkz0FkrfU0ugP4EKEnoj/view?usp=drive_link"
-            }
+            link={"/resume.pdf"}
             target={"_blank"}
             icon={<FiFileText />}
             title={"Resume"}

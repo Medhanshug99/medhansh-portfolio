@@ -7,7 +7,7 @@ import linkedin from "../assets/socials/linkedin.png";
 export const SocialLinks = [
     {
         icon: <img src={linkedin} alt="linkedin" className="w-8 md:w-9" />,
-        href: "https://tinyurl.com/ldmedhansh",
+        href: "https://www.linkedin.com/in/medhansh-poojari-16b242200",
         label: "Linkedin",
         hoverColor: "hover:text-blue-700",
     },

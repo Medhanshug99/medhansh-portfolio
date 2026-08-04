@@ -11,13 +11,17 @@ const Form = () => {
   const sendMail = async (e) => {
     e.preventDefault();
     try {
-      await emailjs.sendForm("service_ly88dhu", "template_yzillrp", form.current, {
-        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      });
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
+      );
       form.current.reset();
       toast.success("Message sent successfully!");
     } catch (error) {
-      console.log("error in sending message", error);
       toast.error("Error! Message not sent");
     }
   };

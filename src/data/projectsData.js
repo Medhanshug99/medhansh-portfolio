@@ -82,6 +82,7 @@ export const projectsData = [
     liveUrl: "https://sort-matrix-opal.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/sort-simulator",
     category: "frontend",
+    hidden: true,
     features: [
       "Algorithm visualization techniques",
       "Customizable array size and sorting speed",
@@ -100,7 +101,7 @@ export const projectsData = [
     image: urbanRoastCafe,
     tags: ["React", "Vite", "Node.js", "Express", "MongoDB", "Framer Motion"],
     liveUrl: "https://urban-roast-cafe-liart.vercel.app/",
-    githubUrl: "https://github.com/Medhanshug99",
+    githubUrl: "https://github.com/Medhanshug99/urban-roast-cafe",
     category: "full-stack",
     features: [
       "Modern, editorial, mobile-first responsive design",
@@ -143,6 +144,7 @@ export const projectsData = [
     liveUrl: "https://digital-persona-simulator-01.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/digital-persona-simulator",
     category: "frontend",
+    hidden: true,
     features: [
       "Dynamic persona interaction",
       "Customizable personality traits",
@@ -163,6 +165,7 @@ export const projectsData = [
     liveUrl: "https://user-interaction-tracker-1.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/user-interaction-tracker",
     category: "frontend",
+    hidden: true,
     features: [
       "Real-time interaction tracking",
       "Event logging and categorization",
@@ -183,6 +186,7 @@ export const projectsData = [
     liveUrl: "https://focusflow-timer-09.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/focusflow-timer",
     category: "frontend",
+    hidden: true,
     features: [
       "Customizable focus and break intervals",
       "Audio notifications for session transitions",
@@ -203,6 +207,7 @@ export const projectsData = [
     liveUrl: "https://simple-currency-converter-1.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/simple-currency-converter",
     category: "frontend",
+    hidden: true,
     features: [
       "Live exchange rate fetching",
       "Support for multiple global currencies",

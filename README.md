@@ -3,7 +3,7 @@
 This is my personal portfolio website built with React, Vite, Tailwind CSS, and Framer Motion.
 It showcases my projects, skills, and contact information with a real-time visitor counter.
 
-### **Visit :** [Live Portfolio](#) *(https://medhanshio.vercel.app/)*
+### **Visit :** [Live Portfolio](https://medhanshdevv.vercel.app/)
 
 ---
 
