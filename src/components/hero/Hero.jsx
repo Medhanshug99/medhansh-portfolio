@@ -144,7 +144,7 @@ const Hero = () => {
         {/* RESUME and GET-IN-TOUCH BUTTONS */}
         <div className="mt-4 md:ml-0 flex gap-4">
           <HeroButton
-            link={"/resume.pdf"}
+            link={"/medhanshpoojari_resume.pdf"}
             target={"_blank"}
             icon={<FiFileText />}
             title={"Resume"}
