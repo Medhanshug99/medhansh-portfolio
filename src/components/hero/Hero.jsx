@@ -26,24 +26,15 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="mt-18 mb-16 flex flex-col justify-center md:gap-5 text-gray-800 dark:text-gray-200"
+      className="pt-24 md:pt-28 mb-16 flex flex-col justify-start md:justify-center md:gap-5 text-gray-800 dark:text-gray-200"
     >
-      {/* Header Image */}
-      <div className="relative">
-        <img
-          src="/header.jpg"
-          alt="header image"
-          className="h-[180px] sm:h-[270px] w-full object-cover"
-        />
-      </div>
-
       {/* Profile Image && Status*/}
       <motion.div
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="relative -mt-16 md:-mt-20 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full z-20"
+        className="relative -mt-12 md:-mt-16 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full z-20"
       >
         {/* Light Mode Hero */}
         <img

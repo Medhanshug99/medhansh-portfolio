@@ -4,7 +4,7 @@ Stack: Vite 7, React 19, Tailwind CSS v4 (@tailwindcss/postcss), Framer Motion, 
 ## Project map (confirmed)
 - App shell: src/App.jsx (ToastContainer, DotBackground; only "/" is a valid route)
 - Navbar: src/components/navbar/Navbar.jsx, NavLinkBtn.jsx (theme toggle lives in Navbar.jsx)
-- Hero: src/components/hero/Hero.jsx, HeroBtn.jsx. Banner image: public/header.jpg. Avatars: public/hero-light.png, public/hero-dark.png. Resume button currently links to /medhanshpoojari_resume.pdf
+- Hero: src/components/hero/Hero.jsx, HeroBtn.jsx. Avatars: public/hero-light.png, public/hero-dark.png. Resume button currently links to /medhanshpoojari_resume.pdf
 - Experience: src/components/experience/Experience.jsx, ExperienceCard.jsx; data: src/data/experienceData.js
 - Projects: src/components/projects/Projects.jsx, ProjectCard.jsx, ProjectDetails.jsx (dialog); data: src/data/projectsData.js
 - Skills: src/components/skills/Skills.jsx, SkillCard.jsx; data: src/data/skillsData.js; icons: PNGs in src/assets/skills/
