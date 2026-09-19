@@ -25,12 +25,12 @@ DocuParse AI: GitHub https://github.com/Medhanshug99/docuparse-ai | Live https:/
 PropPredict: GitHub https://github.com/Medhanshug99/Real-Estate-Price-Predictor | Live https://repropprice.vercel.app/
 
 ## Education
-Indian Institute of Information Technology Ranchi — B.Tech, Computer Science and Engineering, 2024 – 2028, CGPA 8.74
+Indian Institute of Information Technology Ranchi — B.Tech, Computer Science and Engineering, 2024 – 2028, CGPA 8.64
 
 ## Achievements
 Codeforces Specialist (max rating 1421), Rank 298/29960 in Codeforces Round 1102 (Div 2)
 CodeChef 3-Star, Rank 213 in Starters 240B
-LeetCode Knight (1932)
+LeetCode rating 1832
 800+ DSA problems solved
 Built and deployed 6+ full-stack products with public GitHub repos and live demos
 
@@ -43,6 +43,7 @@ What I took away (from my LinkedIn post):
 - The live Q&A sessions showed the difference between learning a concept in theory and hearing it explained by someone who has implemented it at scale.
 - Closing sessions on GenAI, LLMs and Agentic AI felt especially timely given how fast the space is moving.
 - The biggest gain: a clearer sense of how these concepts apply in real-world use cases, beyond just completing modules.
+LinkedIn post (proof): https://lnkd.in/p/d52YnFxh
 (Do NOT name any mentors or instructors.)
 
 ## Credential 2: Udemy
