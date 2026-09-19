@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { BiGlobe } from "react-icons/bi";
 
-const ExperienceCard = ({ item }) => {
+const ExperienceCard = ({ item, index = 0 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -10,7 +10,7 @@ const ExperienceCard = ({ item }) => {
       className="relative"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.1, duration: 1, type: "spring" }}
+      transition={{ delay: index * 0.08, duration: 1, type: "spring" }}
       viewport={{ once: true }}
     >
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-start group">

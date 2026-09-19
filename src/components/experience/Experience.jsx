@@ -26,12 +26,12 @@ const Experience = () => {
         {/* Vertical Timeline Line (Desktop) */}
         <div className="hidden md:block absolute left-[12.5rem] top-2 bottom-2 w-px bg-slate-200 dark:bg-slate-700" />
 
-        {ExperienceData.map((item) => (
+        {ExperienceData.map((item, index) => (
           <div key={item.id} className="relative">
             {/* Timeline Dot (Desktop) */}
             <div className="hidden md:block absolute left-[12.5rem] top-8 w-3 h-3 bg-white dark:bg-slate-800 border-2 border-slate-900 dark:border-slate-400 rounded-full -translate-x-[5px] z-10" />
 
-            <ExperienceCard item={item} />
+            <ExperienceCard item={item} index={index} />
           </div>
         ))}
       </div>
