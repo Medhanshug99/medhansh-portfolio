@@ -28,11 +28,17 @@ const CredentialCard = ({ item, index }) => {
                 {item.title}
               </h3>
               <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mt-1">
-                <span className="font-medium">{item.organization}</span>
-                {item.instructor && (
+                {item.subtitle ? (
+                  <span className="font-medium">{item.subtitle}</span>
+                ) : (
                   <>
-                    <span>•</span>
-                    <span>Instructor: {item.instructor}</span>
+                    <span className="font-medium">{item.organization}</span>
+                    {item.instructor && (
+                      <>
+                        <span>•</span>
+                        <span>Instructor: {item.instructor}</span>
+                      </>
+                    )}
                   </>
                 )}
               </div>

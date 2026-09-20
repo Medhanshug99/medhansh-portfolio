@@ -4,19 +4,20 @@ import { FaAward } from "react-icons/fa6";
 export const credentialsData = [
   {
     id: 'amazon-ml-2026',
-    title: "Selected Participant",
+    title: "Amazon ML Summer School 2026",
     organization: "Amazon",
+    subtitle: "Amazon • Selected Participant",
     icon: SiAmazon,
     pills: ["Virtual", "2026"],
-    summary: "Free, virtual applied-ML program, every module taught by Amazon Scientists who work on these problems in practice.",
+    summary: "Free, virtual applied-ML program; every module was taught by Amazon Scientists who work on these problems in practice.",
     links: [
       { text: "View certificate", url: "https://cdn.unstop.com/uploads/certificates/azmlss/1253_Poojari_Medhansh.pdf" },
       { text: "View LinkedIn post", url: "https://lnkd.in/p/d52YnFxh" }
     ],
     expandable: {
       topics: [
-        "Supervised Learning", "Deep Neural Networks", "Dimensionality Reduction", 
-        "Unsupervised Learning", "Sequential Learning", "Reinforcement Learning", 
+        "Supervised Learning", "Deep Neural Networks", "Dimensionality Reduction",
+        "Unsupervised Learning", "Sequential Learning", "Reinforcement Learning",
         "Generative AI & LLMs", "Agentic AI", "Causal Inference"
       ],
       takeaways: [
