@@ -28,9 +28,11 @@ const Education = () => {
             <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 mt-1">
               {item.gpa}
             </span>
-            <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-3xl leading-relaxed">
-              {item.coursework}
-            </p>
+            {item.coursework && (
+              <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-3xl leading-relaxed">
+                {item.coursework}
+              </p>
+            )}
           </motion.div>
         ))}
       </div>
