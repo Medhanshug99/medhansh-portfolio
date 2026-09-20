@@ -2,13 +2,12 @@ export const ExperienceData = [
     {
         id: '1',
         role: "Freelance – Full Stack Developer",
-        company: "Self Employed",
+        company: "Self Employed • Client: Zidio Development",
         type: "Remote",
         date: "Dec 2025 – Present",
         location: "Remote",
-        client: "Zidio Development",
-        clientPeriod: "June 2026 – Aug 2026",
         project: "IntellMeet",
+        projectDate: "June 2026 – Aug 2026",
         githubUrl: "https://github.com/Medhanshug99/intellmeet-v1",
         liveUrl: "https://intellmeet-v2-nu.vercel.app",
         bullets: [
@@ -18,5 +17,5 @@ export const ExperienceData = [
             "Async LLM pipeline (BullMQ, Redis, Llama 3 via Groq) generating summaries, decisions and action items for a 60-minute meeting in under 2 minutes, with retry-with-backoff and graceful fallback on API failure."
         ],
         technologies: ["Node.js", "TypeScript", "WebSockets", "Redis", "BullMQ", "Groq / Llama 3", "JWT", "RBAC"]
-    },
+    }
 ];

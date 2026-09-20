@@ -54,13 +54,38 @@ const ExperienceCard = ({ item, index = 0 }) => {
                 </div>
               </div>
 
-              <div className="flex flex-col items-end gap-1 pl-2">
+              <div className="flex items-center gap-3 md:gap-4 pl-2">
                 {/* Mobile Date */}
-                <div className="md:hidden text-right mb-1">
+                <div className="md:hidden text-right mr-1">
                   <span className="text-xs font-bold text-slate-700 dark:text-slate-300 block">
                     {item.date}
                   </span>
                 </div>
+
+                {item.githubUrl && (
+                  <a
+                    href={item.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+                    aria-label="GitHub Repository"
+                  >
+                    <FiGithub size={20} />
+                  </a>
+                )}
+                {item.liveUrl && (
+                  <a
+                    href={item.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+                    aria-label="Live Demo"
+                  >
+                    <BiGlobe size={20} />
+                  </a>
+                )}
 
                 {/* Chevron */}
                 <div
@@ -97,6 +122,15 @@ const ExperienceCard = ({ item, index = 0 }) => {
                   <div className="px-5 md:px-6 pb-6 pt-0">
                     <div className="h-px w-full bg-slate-200 dark:bg-slate-700 mb-4"></div>
 
+                    {item.project && (
+                      <div className="mb-4">
+                        <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                          {item.project}
+                          {item.projectDate && <span className="text-slate-500 dark:text-slate-400 font-normal"> · {item.projectDate}</span>}
+                        </h4>
+                      </div>
+                    )}
+
                     {/* Bullet Points */}
                     <ul className="space-y-2 mb-6 ml-1">
                       {item.bullets.map((bullet, idx) => (
@@ -126,29 +160,7 @@ const ExperienceCard = ({ item, index = 0 }) => {
                         ))}
                       </div>
 
-                      {/* Project Links */}
-                      {item.githubUrl && (
-                        <a
-                          href={item.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
-                        >
-                          <FiGithub size={18} />
-                          Source code
-                        </a>
-                      )}
-                      {item.liveUrl && (
-                        <a
-                          href={item.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
-                        >
-                          <BiGlobe size={18} />
-                          Live demo
-                        </a>
-                      )}
+                      {/* Project Links (Moved to header) */}
                     </div>
                   </div>
                 </motion.div>
