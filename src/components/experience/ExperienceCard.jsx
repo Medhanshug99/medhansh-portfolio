@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { BiGlobe } from "react-icons/bi";
+import { FiGithub } from "react-icons/fi";
 
 const ExperienceCard = ({ item, index = 0 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -124,6 +125,30 @@ const ExperienceCard = ({ item, index = 0 }) => {
                           </span>
                         ))}
                       </div>
+
+                      {/* Project Links */}
+                      {item.githubUrl && (
+                        <a
+                          href={item.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                        >
+                          <FiGithub size={18} />
+                          Source code
+                        </a>
+                      )}
+                      {item.liveUrl && (
+                        <a
+                          href={item.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                        >
+                          <BiGlobe size={18} />
+                          Live demo
+                        </a>
+                      )}
                     </div>
                   </div>
                 </motion.div>
