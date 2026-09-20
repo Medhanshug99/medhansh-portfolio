@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://medhanshdevv.vercel.app/sitemap.xml
