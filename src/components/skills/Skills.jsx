@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { skills } from "../../data/skillsData";
+import { skills, mlAiSkills, supportingSkills } from "../../data/skillsData";
 import SkillCard from "./SkillCard";
 
 // Main Skills Component
@@ -27,16 +27,16 @@ const Skills = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          From frontend frameworks to backend databases and dev tools, here's
-          what I use.
+          From frontend frameworks to backend databases, dev tools, machine learning, and LLM orchestration.
         </motion.p>
 
         {/* Skills Grid */}
         <section className="w-full flex items-start justify-start flex-wrap gap-3">
-          {skills.map((skill, index) => (
+          {[...skills, ...mlAiSkills, ...supportingSkills].map((skill, index) => (
             <SkillCard
               key={index}
               src={skill?.icon}
+              IconComponent={skill?.iconComponent}
               name={skill?.name}
               index={index}
               id={skill.name}
