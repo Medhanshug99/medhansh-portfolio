@@ -1,6 +1,7 @@
 import { motion, spring } from "framer-motion";
 import { ExperienceData } from "../../data/experienceData";
 import ExperienceCard from "./ExperienceCard";
+import Credentials from "../credentials/Credentials";
 
 const Experience = () => {
   return (
@@ -22,7 +23,7 @@ const Experience = () => {
         </p>
       </motion.div>
 
-      <div className="relative space-y-8">
+      <div className="relative space-y-8 mb-16">
         {/* Vertical Timeline Line (Desktop) */}
         <div className="hidden md:block absolute left-[12.5rem] top-2 bottom-2 w-px bg-slate-200 dark:bg-slate-700" />
 
@@ -35,6 +36,8 @@ const Experience = () => {
           </div>
         ))}
       </div>
+      
+      <Credentials />
     </section>
   );
 };
