@@ -2,6 +2,8 @@ import { motion, spring } from "framer-motion";
 import { ExperienceData } from "../../data/experienceData";
 import ExperienceCard from "./ExperienceCard";
 import Credentials from "../credentials/Credentials";
+import Education from "../credentials/Education";
+import Achievements from "../credentials/Achievements";
 
 const Experience = () => {
   return (
@@ -38,6 +40,8 @@ const Experience = () => {
       </div>
       
       <Credentials />
+      <Education />
+      <Achievements />
     </section>
   );
 };
