@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../../config/emailjs";
 import Input from "./Input";
 import { BsSend } from "react-icons/bs";
 
@@ -12,7 +13,7 @@ const Form = () => {
   // LOGIC for sending message
   const sendMail = async (e) => {
     e.preventDefault();
-    
+
     // Honeypot check
     const formData = new FormData(form.current);
     if (formData.get("_gotcha")) {
@@ -25,7 +26,11 @@ const Form = () => {
     }
 
     // Basic validation
-    if (!formData.get("user_name") || !formData.get("user_email") || !formData.get("message")) {
+    const name = formData.get("user_name")?.trim();
+    const email = formData.get("user_email")?.trim();
+    const message = formData.get("message")?.trim();
+
+    if (!name || !email || !message) {
       toast.error("Please fill out all fields.");
       return;
     }
@@ -33,21 +38,32 @@ const Form = () => {
     setIsLoading(true);
 
     try {
-      await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
         {
-          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-        }
+          title: `New message from ${name}`,
+          name: name,
+          user_name: name,
+          email: email,
+          user_email: email,
+          time: new Date().toLocaleString("en-IN", {
+            dateStyle: "medium",
+            timeStyle: "short",
+          }),
+          message: message,
+        },
+        { publicKey: PUBLIC_KEY }
       );
       form.current.reset();
       toast.success("Message sent successfully!");
       setCooldown(true);
       setTimeout(() => setCooldown(false), 30000); // 30 second cooldown
-    } catch (error) {
-      console.error("EmailJS Error:", error.status, error.text);
-      toast.error("Error! Message not sent.");
+    } catch (err) {
+      console.error(err.status, err.text);
+      toast.error(
+        "Could not send your message. Please email me directly at medhanshp7@gmail.com."
+      );
     } finally {
       setIsLoading(false);
     }
