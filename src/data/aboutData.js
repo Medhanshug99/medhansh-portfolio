@@ -25,18 +25,18 @@ export const achievementsData = [
     platform: "Codeforces",
     badge: "Specialist",
     stats: ["Max rating 1421", "Rank 298 of 29,960 in Codeforces Round 1102 (Div. 2)"],
-    profileUrl: null
+    profileUrl: "https://codeforces.com/profile/medh_ansh"
   },
   {
     platform: "LeetCode",
     badge: "Knight",
     stats: ["Rating 1832"],
-    profileUrl: null
+    profileUrl: "https://leetcode.com/u/Medh_ansh44/"
   },
   {
     platform: "CodeChef",
     badge: "3-Star",
     stats: ["Rank 213 in Starters 240B"],
-    profileUrl: null
+    profileUrl: "https://www.codechef.com/users/smart_syntax"
   }
 ];
