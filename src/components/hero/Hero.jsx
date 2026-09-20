@@ -6,6 +6,7 @@ import { HeroButton } from "./HeroBtn";
 import { SocialLinks } from "../../data/socialLinks";
 import { GrLocation } from "react-icons/gr";
 import { Tooltip } from "react-tooltip";
+import ResumeDialog from "./ResumeDialog";
 
 const Hero = () => {
   // FRAMER MOTION VARIANTS
@@ -114,12 +115,12 @@ const Hero = () => {
 
         {/* RESUME and GET-IN-TOUCH BUTTONS */}
         <div className="mt-4 md:ml-0 flex gap-4">
-          <HeroButton
-            link={"/medhanshpoojari_resume.pdf"}
-            target={"_blank"}
-            icon={<FiFileText />}
-            title={"Resume"}
-          />
+          <ResumeDialog>
+            <HeroButton
+              icon={<FiFileText />}
+              title={"Resume"}
+            />
+          </ResumeDialog>
           <HeroButton
             link={"/#contact"}
             target={""}
