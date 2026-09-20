@@ -67,7 +67,7 @@ const Hero = () => {
       >
         {/* TITLE and DESCRIPTION */}
         <h1 className="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white">
-          Hey, I'm Medhansh 👋 -{" "}
+          Hey, I'm Medhansh -{" "}
           <TypingText
             duration={2}
             align="center"

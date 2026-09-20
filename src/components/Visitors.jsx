@@ -47,7 +47,7 @@ function Visitors() {
 
   return (
     <div className="px-2 py-1 mb-2 text-sm text-neutral-500 dark:text-neutral-400 border rounded-lg bg-neutral-50 dark:bg-neutral-900">
-      👀 Total Visits: <b>{visits.toLocaleString()}</b>
+      Total Visits: <b>{visits.toLocaleString()}</b>
     </div>
   );
 }

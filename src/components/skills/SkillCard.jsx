@@ -20,12 +20,12 @@ const cardVariants = {
 
 // Random texts
 const dragTexts = [
-  "Put me back!! 😤",
+  "Put me back!!",
   "Hey! Wrong place!",
-  "Careful… I belong there 👀",
+  "Careful… I belong there",
   "Oops! Not here!",
-  "Easy there, stranger 😅",
-  "Drag me home 🏠",
+  "Easy there, stranger",
+  "Drag me home",
   "Hey! I was comfy there!",
 ];
 
