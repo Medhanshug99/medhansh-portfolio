@@ -5,7 +5,7 @@ import focusFlowTimer from "../assets/projects/focusFlowTimer.png";
 import currencyConverter from "../assets/projects/currencyConverter.png";
 import chessCraft from "../assets/projects/Chess.png";
 import miniCrm from "../assets/projects/MiniCrm.png";
-import urbanRoastCafe from "../assets/projects/UrbanRoastCafe.png";
+import urbanRoastCafe from "../assets/projects/UrbanRoastCafe.webp";
 import propPredict from "../assets/projects/propPredict.png";
 
 export const projectsData = [

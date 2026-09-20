@@ -40,12 +40,12 @@ const Hero = () => {
         {/* Light Mode Hero */}
         <img
           className="dark:hidden w-28 md:w-32 rounded-full transition-all duration-300 ease-in-out bg-sky-200 hover:scale-105 cursor-pointer"
-          src="/hero-light.png"
+          src="/hero-light.webp"
         />
         {/* Dark Mode Hero */}
         <img
           className="hidden dark:inline-block w-28 md:w-32 rounded-full transition-all duration-300 ease-in-out bg-purple-900/40 hover:scale-105 cursor-pointer shadow-[0_0_15px_rgba(168,85,247,0.4)]"
-          src="/hero-dark.png"
+          src="/hero-dark.webp"
         />
         <span
           data-tooltip-id="status"

@@ -37,7 +37,7 @@ const NotFound = () => {
           <div className="relative p-8">
             {/* Image */}
             <img
-              src="/404-computer.svg"
+              src="/404-computer.webp"
               alt="404 - Person at computer showing error"
               className="w-full h-auto object-contain transform hover:scale-105 transition-transform duration-500"
             />
