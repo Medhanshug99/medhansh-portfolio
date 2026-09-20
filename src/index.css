@@ -2,6 +2,7 @@
 @import "tailwindcss";
 @import "./ui/lightswind.css";
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant hover (@media (hover: hover) { &:hover });
 
 body {
     font-family: "Inter", system-ui, -apple-system, sans-serif;

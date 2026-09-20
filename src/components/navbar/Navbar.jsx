@@ -15,7 +15,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           <a href="#home">
             <motion.img
               className="h-11 w-11 bg-blue-300 rounded-md transition-all duration-300 ease-in-out hover:scale-90 dark:bg-zinc-300"
-              src={darkMode ? "/hero-dark.png" : "/hero-light.png"}
+              src={darkMode ? "/hero-dark.webp" : "/hero-light.webp"}
               whileHover="hover"
             />
           </a>

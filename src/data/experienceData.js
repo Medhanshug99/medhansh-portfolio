@@ -1,30 +1,21 @@
 export const ExperienceData = [
     {
-        id: '2',
-        role: "Full Stack Developer Intern",
-        company: "Future Interns",
-        type: "Internship",
-        date: "April 2026 - May 2026",
-        location: "Remote",
-        bullets: [
-            "Engineered a production-grade Mini CRM using the MERN stack with full CRUD operations, JWT-based authentication, and role-based access control for secure client record management.",
-            "Developed and deployed a full-stack business website for a food & beverage client – custom React frontend (zero UI framework templates) backed by a secure Node.js/Express RESTful API.",
-            "Delivered both projects end-to-end (frontend, backend, deployment) independently within a 1-month remote engagement, implementing protected routing, server-side validation, and modular component architecture."
-        ],
-        technologies: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "REST API"]
-    },
-    {
         id: '1',
-        role: "Freelance - Web Developer",
-        company: "Self Employed",
+        role: "Freelance – Full Stack Developer",
+        company: "Self Employed • Client: Zidio Development",
         type: "Remote",
-        date: "Dec 2025 - Present",
+        date: "Dec 2025 – Present",
         location: "Remote",
+        project: "IntellMeet",
+        projectDate: "June 2026 – Aug 2026",
+        githubUrl: "https://github.com/Medhanshug99/intellmeet-v1",
+        liveUrl: "https://intellmeet-v2-nu.vercel.app",
         bullets: [
-            "Designed and developed a fully responsive website using Next.js and React with a focus on performance and scalability.",
-            "Implemented SEO best practices including metadata optimization, server-side rendering, and semantic HTML.",
-            "Handled deployment, hosting, and continuous improvements for the live production website.",
+            "Gathered requirements directly with the client and translated them into a technical specification.",
+            "JWT auth with rotating refresh tokens, OTP login, and a server-enforced 4-tier RBAC approval flow (Guest/Member/Host/Admin); REST endpoints averaging under 200ms p95.",
+            "Real-time chat and presence over WebSockets with sub-100ms latency; video join flow under 3 seconds from \"Join Now\" to first frame.",
+            "Async LLM pipeline (BullMQ, Redis, Llama 3 via Groq) generating summaries, decisions and action items for a 60-minute meeting in under 2 minutes, with retry-with-backoff and graceful fallback on API failure."
         ],
-        technologies: ["Next.js", "Javascript", "Tailwind CSS", "SEO", "React"]
-    },
+        technologies: ["Node.js", "TypeScript", "WebSockets", "Redis", "BullMQ", "Groq / Llama 3", "JWT", "RBAC"]
+    }
 ];

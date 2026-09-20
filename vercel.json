@@ -1,4 +1,15 @@
 {
+  "headers": [
+    {
+      "source": "/resume/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
@@ -6,4 +17,3 @@
     }
   ]
 }
-

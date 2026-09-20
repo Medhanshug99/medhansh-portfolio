@@ -6,6 +6,7 @@ import { HeroButton } from "./HeroBtn";
 import { SocialLinks } from "../../data/socialLinks";
 import { GrLocation } from "react-icons/gr";
 import { Tooltip } from "react-tooltip";
+import ResumeDialog from "./ResumeDialog";
 
 const Hero = () => {
   // FRAMER MOTION VARIANTS
@@ -26,38 +27,29 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="mt-18 mb-16 flex flex-col justify-center md:gap-5 text-gray-800 dark:text-gray-200"
+      className="pt-24 md:pt-28 mb-16 flex flex-col justify-start md:justify-center md:gap-5 text-gray-800 dark:text-gray-200"
     >
-      {/* Header Image */}
-      <div className="relative">
-        <img
-          src="/header.jpg"
-          alt="header image"
-          className="h-[180px] sm:h-[270px] w-full object-cover"
-        />
-      </div>
-
       {/* Profile Image && Status*/}
       <motion.div
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="relative -mt-16 md:-mt-20 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full z-20"
+        className="relative -mt-12 md:-mt-16 md:ml-6 mb-5 md:mb-0 w-fit p-1 rounded-full z-20"
       >
         {/* Light Mode Hero */}
         <img
           className="dark:hidden w-28 md:w-32 rounded-full transition-all duration-300 ease-in-out bg-sky-200 hover:scale-105 cursor-pointer"
-          src="/hero-light.png"
+          src="/hero-light.webp"
         />
         {/* Dark Mode Hero */}
         <img
           className="hidden dark:inline-block w-28 md:w-32 rounded-full transition-all duration-300 ease-in-out bg-purple-900/40 hover:scale-105 cursor-pointer shadow-[0_0_15px_rgba(168,85,247,0.4)]"
-          src="/hero-dark.png"
+          src="/hero-dark.webp"
         />
         <span
           data-tooltip-id="status"
-          data-tooltip-content="Open to full-time SWE/Full Stack roles"
+          data-tooltip-content="Open to SDE and ML internships"
           className="absolute right-2 top-21 md:right-2.5 md:top-24 h-3 w-3 rounded-full border border-neutral-700 bg-emerald-400 glow-green animate-pulse"
         ></span>
         <Tooltip
@@ -75,7 +67,7 @@ const Hero = () => {
       >
         {/* TITLE and DESCRIPTION */}
         <h1 className="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white">
-          Hey, I'm Medhansh 👋 -{" "}
+          Hey, I'm Medhansh -{" "}
           <TypingText
             duration={2}
             align="center"
@@ -88,7 +80,7 @@ const Hero = () => {
           I build AI-integrated web applications that solve real problems, not just demo well. That's meant designing a document parsing engine with LayoutLMv3 and BullMQ to cut manual review time, and engineering a custom Alpha-Beta pruning chess AI from scratch because I wanted to understand search algorithms at a deeper level than a tutorial could teach me.
         </p>
         <p className="mt-3 font-medium text-[17px] text-gray-700 dark:text-gray-400 ">
-          I care about system architecture, performance under load, and shipping things that hold up outside a sandbox. Currently looking for full-time Full Stack or SWE roles where I can work on problems that are actually hard.
+          I care about system architecture, performance under load, and shipping things that hold up outside a sandbox. Graduating in 2028 and currently seeking internship roles in Full Stack, SWE and ML.
         </p>
 
         {/* Location and Socials */}
@@ -123,12 +115,12 @@ const Hero = () => {
 
         {/* RESUME and GET-IN-TOUCH BUTTONS */}
         <div className="mt-4 md:ml-0 flex gap-4">
-          <HeroButton
-            link={"/medhanshpoojari_resume.pdf"}
-            target={"_blank"}
-            icon={<FiFileText />}
-            title={"Resume"}
-          />
+          <ResumeDialog>
+            <HeroButton
+              icon={<FiFileText />}
+              title={"Resume"}
+            />
+          </ResumeDialog>
           <HeroButton
             link={"/#contact"}
             target={""}

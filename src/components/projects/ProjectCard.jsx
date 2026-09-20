@@ -41,7 +41,7 @@ const ProjectCard = ({ project, index }) => {
 
           {/* Links */}
           <div className="flex gap-2 text-gray-700 dark:text-gray-300">
-            {project.status === "In Progress" ? null : (
+            {project.status === "In Progress" ? null : project.liveUrl ? (
               <a
                 href={project.liveUrl}
                 target="_blank"
@@ -51,7 +51,7 @@ const ProjectCard = ({ project, index }) => {
               >
                 <BiGlobe size={24} />
               </a>
-            )}
+            ) : null}
             <a
               href={project.githubUrl}
               target="_blank"

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check:emoji": "node scripts/check-no-emoji.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

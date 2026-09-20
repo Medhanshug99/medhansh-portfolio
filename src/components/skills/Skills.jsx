@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { skills } from "../../data/skillsData";
+import { skills, mlAiSkills, supportingSkills } from "../../data/skillsData";
 import SkillCard from "./SkillCard";
 
 // Main Skills Component
@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full pt-16 pb-8 px-4 md:px-8 scroll-mt-8 border-y border-slate-200 dark:border-neutral-900"
+      className="w-full pt-16 pb-8 px-4 md:px-8 scroll-mt-24 border-y border-slate-200 dark:border-neutral-900"
     >
       <div className="container mx-auto text-start">
         <motion.h2
@@ -27,22 +27,68 @@ const Skills = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          From frontend frameworks to backend databases and dev tools, here's
-          what I use.
+          From frontend frameworks to backend databases, dev tools, machine learning, and LLM orchestration.
         </motion.p>
 
-        {/* Skills Grid */}
-        <section className="w-full flex items-start justify-start flex-wrap gap-3">
-          {skills.map((skill, index) => (
-            <SkillCard
-              key={index}
-              src={skill?.icon}
-              name={skill?.name}
-              index={index}
-              id={skill.name}
-            />
+        {/* Skills Categories */}
+        <div className="flex flex-col gap-10 mt-10">
+          {[
+            {
+              title: "Languages",
+              items: [
+                ...skills.filter((s) => ["JavaScript", "Typescript"].includes(s.name)),
+                ...supportingSkills.filter((s) => ["Python"].includes(s.name)),
+              ],
+            },
+            {
+              title: "Frontend",
+              items: skills.filter((s) =>
+                ["HTML", "CSS", "React", "NextJs", "Tailwind CSS", "Bootstrap", "Framer Motion", "React Router"].includes(s.name)
+              ),
+            },
+            {
+              title: "Backend and Data",
+              items: [
+                ...skills.filter((s) =>
+                  ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "Mongoose", "Prisma", "Firebase"].includes(s.name)
+                ),
+                ...supportingSkills.filter((s) => ["FastAPI", "Redis", "BullMQ", "WebSockets"].includes(s.name)),
+              ],
+            },
+            {
+              title: "ML and AI",
+              items: mlAiSkills,
+            },
+            {
+              title: "Tools and DevOps",
+              items: [
+                ...skills.filter((s) => ["Git", "GitHub", "Postman", "Shadcn UI", "VsCode"].includes(s.name)),
+                ...supportingSkills.filter((s) => ["Docker", "Docker Compose", "GitHub Actions"].includes(s.name)),
+              ],
+            },
+          ].map((category, idx) => (
+            <div key={idx} className="flex flex-col gap-4">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                {category.title}
+              </h3>
+              <div className="w-full flex items-start justify-start flex-wrap gap-3">
+                {category.items.map((skill, index) => {
+                  if (!skill) return null;
+                  return (
+                    <SkillCard
+                      key={skill.name}
+                      src={skill.icon}
+                      IconComponent={skill.iconComponent}
+                      name={skill.name}
+                      index={index}
+                      id={skill.name}
+                    />
+                  );
+                })}
+              </div>
+            </div>
           ))}
-        </section>
+        </div>
       </div>
     </section>
   );

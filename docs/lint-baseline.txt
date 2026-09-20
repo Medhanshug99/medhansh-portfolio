@@ -1,0 +1,53 @@
+> portfolio@0.0.0 lint
+> eslint .
+
+D:\Downloads\Portfolio-main\Portfolio-main\api\visits.js
+  11:22  error  'process' is not defined  no-undef
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\GithubHeatmap.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\Visitors.jsx
+  32:16  error  'error' is defined but never used  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\blogs\BlogCard.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\blogs\Blogs.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\contact\Contact.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\contact\Form.jsx
+  24:14  error  'error' is defined but never used  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\experience\Experience.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  1:18  error  'spring' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\experience\ExperienceCard.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\hero\Hero.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\navbar\NavLinkBtn.jsx
+  13:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\navbar\Navbar.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\projects\ProjectCard.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\projects\Projects.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\skills\SkillCard.jsx
+  2:27  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Downloads\Portfolio-main\Portfolio-main\src\components\skills\Skills.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+✖ 17 problems (17 errors, 0 warnings)

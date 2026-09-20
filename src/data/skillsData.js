@@ -22,6 +22,16 @@ import prisma from "../assets/skills/prisma.png";
 import mongoose from "../assets/skills/mongoose.png";
 import shadcn from "../assets/skills/shadcn.png";
 
+import { 
+  SiPytorch, SiScikitlearn, SiHuggingface, SiLangchain, 
+  SiPython, SiFastapi, SiRedis, SiDocker, SiGithubactions, SiSocketdotio 
+} from "react-icons/si";
+
+import {
+  LuBrainCircuit, LuFileText, LuMessageSquare, LuMic,
+  LuAudioLines, LuPenTool, LuChartBar, LuWorkflow
+} from "react-icons/lu";
+
 // SKILLS DATA
 export const skills = [
   // Languages
@@ -53,4 +63,30 @@ export const skills = [
   { name: "Postman", icon: postmanLogo },
   { name: "Shadcn UI", icon: shadcn },
   { name: "VsCode", icon: vsCodeLogo },
+];
+
+export const mlAiSkills = [
+  { name: "PyTorch", iconComponent: SiPytorch },
+  { name: "HuggingFace Transformers", iconComponent: SiHuggingface },
+  { name: "LayoutLMv3", iconComponent: LuFileText },
+  { name: "Scikit-Learn", iconComponent: SiScikitlearn },
+  { name: "LangChain", iconComponent: SiLangchain },
+  { name: "LLM API Integration", iconComponent: LuMessageSquare },
+  { name: "Whisper", iconComponent: LuMic },
+  { name: "wav2vec2", iconComponent: LuAudioLines },
+  { name: "Prompt Engineering", iconComponent: LuPenTool },
+  { name: "Document Extraction", iconComponent: LuFileText },
+  { name: "Model Evaluation", iconComponent: LuChartBar },
+  { name: "Agentic Orchestration", iconComponent: LuBrainCircuit },
+];
+
+export const supportingSkills = [
+  { name: "Python", iconComponent: SiPython },
+  { name: "FastAPI", iconComponent: SiFastapi },
+  { name: "Redis", iconComponent: SiRedis },
+  { name: "BullMQ", iconComponent: LuWorkflow },
+  { name: "Docker", iconComponent: SiDocker },
+  { name: "Docker Compose", iconComponent: SiDocker },
+  { name: "GitHub Actions", iconComponent: SiGithubactions },
+  { name: "WebSockets", iconComponent: SiSocketdotio },
 ];

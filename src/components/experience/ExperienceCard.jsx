@@ -1,8 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { BiGlobe } from "react-icons/bi";
+import { FiGithub } from "react-icons/fi";
 
-const ExperienceCard = ({ item }) => {
+const ExperienceCard = ({ item, index = 0 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -10,7 +11,7 @@ const ExperienceCard = ({ item }) => {
       className="relative"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.1, duration: 1, type: "spring" }}
+      transition={{ delay: index * 0.08, duration: 1, type: "spring" }}
       viewport={{ once: true }}
     >
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-start group">
@@ -53,13 +54,38 @@ const ExperienceCard = ({ item }) => {
                 </div>
               </div>
 
-              <div className="flex flex-col items-end gap-1 pl-2">
+              <div className="flex items-center gap-3 md:gap-4 pl-2">
                 {/* Mobile Date */}
-                <div className="md:hidden text-right mb-1">
+                <div className="md:hidden text-right mr-1">
                   <span className="text-xs font-bold text-slate-700 dark:text-slate-300 block">
                     {item.date}
                   </span>
                 </div>
+
+                {item.githubUrl && (
+                  <a
+                    href={item.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+                    aria-label="GitHub Repository"
+                  >
+                    <FiGithub size={20} />
+                  </a>
+                )}
+                {item.liveUrl && (
+                  <a
+                    href={item.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+                    aria-label="Live Demo"
+                  >
+                    <BiGlobe size={20} />
+                  </a>
+                )}
 
                 {/* Chevron */}
                 <div
@@ -96,6 +122,15 @@ const ExperienceCard = ({ item }) => {
                   <div className="px-5 md:px-6 pb-6 pt-0">
                     <div className="h-px w-full bg-slate-200 dark:bg-slate-700 mb-4"></div>
 
+                    {item.project && (
+                      <div className="mb-4">
+                        <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                          {item.project}
+                          {item.projectDate && <span className="text-slate-500 dark:text-slate-400 font-normal"> · {item.projectDate}</span>}
+                        </h4>
+                      </div>
+                    )}
+
                     {/* Bullet Points */}
                     <ul className="space-y-2 mb-6 ml-1">
                       {item.bullets.map((bullet, idx) => (
@@ -124,6 +159,8 @@ const ExperienceCard = ({ item }) => {
                           </span>
                         ))}
                       </div>
+
+                      {/* Project Links (Moved to header) */}
                     </div>
                   </div>
                 </motion.div>

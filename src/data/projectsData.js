@@ -5,11 +5,53 @@ import focusFlowTimer from "../assets/projects/focusFlowTimer.png";
 import currencyConverter from "../assets/projects/currencyConverter.png";
 import chessCraft from "../assets/projects/Chess.png";
 import miniCrm from "../assets/projects/MiniCrm.png";
-import urbanRoastCafe from "../assets/projects/UrbanRoastCafe.png";
-import docuparseAi from "../assets/projects/docuparseAi.png";
+import urbanRoastCafe from "../assets/projects/UrbanRoastCafe.webp";
+import docuparseAi from "../assets/projects/docuparseAi.webp";
 import propPredict from "../assets/projects/propPredict.png";
+import intellmeetCover from "../assets/projects/intellmeet.webp";
+import redlineCover from "../assets/projects/redline.webp";
 
 export const projectsData = [
+  {
+    title: "IntellMeet",
+    description: "Real-time meeting collaboration platform built for a client, with live video, chat and presence, role-based access, and an AI pipeline that turns a 60-minute meeting into a summary, decisions and action items in under 2 minutes.",
+    image: intellmeetCover,
+    tags: ["Node.js", "TypeScript", "WebSockets", "Redis", "BullMQ", "Groq / Llama 3", "JWT"],
+    liveUrl: "https://intellmeet-v2-nu.vercel.app",
+    githubUrl: "https://github.com/Medhanshug99/intellmeet-v1",
+    category: "full-stack",
+    features: [
+      "JWT auth with rotating refresh tokens, OTP login, 4-tier RBAC (Guest, Member, Host, Admin)",
+      "Chat and presence latency under 100ms; video join under 3 seconds",
+      "REST endpoints under 200ms p95",
+      "60-minute meeting summarized in under 2 minutes; retry-with-backoff and graceful fallback on API failure"
+    ],
+    whatILearned: [
+      "Integrating real-time WebRTC video with a Node.js/TypeScript backend",
+      "Building low-latency AI pipelines with BullMQ, Redis and Groq",
+      "Scaling WebSocket connections and implementing 4-tier RBAC"
+    ]
+  },
+  {
+    title: "REDLINE",
+    subtitle: "AI Co-Driver for Driver Stress Detection",
+    description: "Built in a 48-hour hackathon as ML and backend lead of a 2-person team: a Python pipeline that transcribes live audio with Whisper and cross-checks vocal-stress classification (wav2vec2) against transcript sentiment to detect driver state in real time.",
+    image: redlineCover,
+    tags: ["Python", "FastAPI", "HuggingFace", "Whisper", "wav2vec2", "React"],
+    githubUrl: "https://github.com/Medhanshug99/redline-ai-codriver",
+    category: "full-stack",
+    features: [
+      "Live audio transcription with OpenAI Whisper",
+      "Vocal-stress classification via wav2vec2",
+      "Cross-checking transcript sentiment against vocal stress for driver state detection",
+      "FastAPI backend with React frontend for real-time display"
+    ],
+    whatILearned: [
+      "Combining speech-to-text and audio classification in a real-time pipeline",
+      "Working effectively in a 2-person team under 48-hour hackathon constraints",
+      "Integrating HuggingFace models into a FastAPI service"
+    ]
+  },
   {
     title: "DocuParse AI",
     description: "DocuParse AI is a full-stack intelligent document processing platform. Users upload invoice images, and the system uses a fine-tuned LayoutLMv3 transformer model backed by EasyOCR to automatically extract structured fields. In testing on a set of 80 invoice images, the system achieved over 90% field extraction accuracy with zero manual re-entry required. Features include confidence scoring, a human-in-the-loop review interface, and export to JSON/Excel.",
@@ -32,7 +74,7 @@ export const projectsData = [
   },
   {
     title: "PropPredict - Real Estate Predictor",
-    description: "A full-stack web application that predicts real estate prices and recommends properties based on user preferences. The Random Forest model trained on a cleaned dataset of 13,000+ property records achieves an R² score of 0.87 on the test set. Features a modern dashboard, a custom machine learning pipeline, and smart property recommendations.",
+    description: "A full-stack web application that predicts real estate prices and recommends properties based on user preferences. The Random Forest model trained on a cleaned dataset of 13,000+ property records achieves an R\u00b2 score of 0.87 on the test set. Features a modern dashboard, a custom machine learning pipeline, and smart property recommendations.",
     image: propPredict,
     tags: ["React", "TypeScript", "Tailwind CSS", "FastAPI", "Scikit-Learn", "PostgreSQL", "Docker"],
     liveUrl: "https://repropprice.vercel.app/",
@@ -58,6 +100,7 @@ export const projectsData = [
     liveUrl: "https://vite-chess.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/chess-web",
     category: "frontend",
+
     features: [
       "Custom browser-based chess engine",
       "Piece-Square Tables (PSTs) for positional evaluation",
@@ -71,31 +114,6 @@ export const projectsData = [
     ]
   },
   {
-    title: "Sort Simulator",
-    description: "Sort Simulator is a web application that helps users understand different sorting algorithms by visualizing their execution. It supports multiple sorting algorithms including Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort. Users can customize array size, generation speed, and view step-by-step visualizations along with performance metrics.",
-    image: sortingSimulator,
-    tags: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-    ],
-    liveUrl: "https://sort-matrix-opal.vercel.app/",
-    githubUrl: "https://github.com/Medhanshug99/sort-simulator",
-    category: "frontend",
-    hidden: true,
-    features: [
-      "Algorithm visualization techniques",
-      "Customizable array size and sorting speed",
-      "Step-by-step execution view",
-      "Performance metrics and comparison"
-    ],
-    whatILearned: [
-      "Managing complex React state for visualizations",
-      "Deep understanding of sorting algorithms (Bubble, Merge, Quick, etc.)",
-      "Optimizing rendering performance during fast animations"
-    ]
-  },
-  {
     title: "Urban Roast Café",
     description: "A full-stack (MERN) web application built for a boutique café. This project features a completely custom, recruiter-grade React frontend and a secure Node.js/Express backend.",
     image: urbanRoastCafe,
@@ -103,6 +121,7 @@ export const projectsData = [
     liveUrl: "https://urban-roast-cafe-liart.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/urban-roast-cafe",
     category: "full-stack",
+
     features: [
       "Modern, editorial, mobile-first responsive design",
       "Dynamic Menu fetched from MongoDB with instant client-side category filtering",
@@ -124,6 +143,7 @@ export const projectsData = [
     liveUrl: "https://mini-crm-mern-theta.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/FUTURE_FS_02",
     category: "full-stack",
+
     features: [
       "Public lead generation form",
       "Secure admin dashboard with JWT authentication",
@@ -144,7 +164,7 @@ export const projectsData = [
     liveUrl: "https://digital-persona-simulator-01.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/digital-persona-simulator",
     category: "frontend",
-    hidden: true,
+
     features: [
       "Dynamic persona interaction",
       "Customizable personality traits",
@@ -197,6 +217,31 @@ export const projectsData = [
       "Managing accurate intervals and timers in React",
       "Handling audio playback and notifications",
       "Persisting user preferences and history with LocalStorage"
+    ]
+  },
+  {
+    title: "Sort Simulator",
+    description: "Sort Simulator is a web application that helps users understand different sorting algorithms by visualizing their execution. It supports multiple sorting algorithms including Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort. Users can customize array size, generation speed, and view step-by-step visualizations along with performance metrics.",
+    image: sortingSimulator,
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+    liveUrl: "https://sort-matrix-opal.vercel.app/",
+    githubUrl: "https://github.com/Medhanshug99/sort-simulator",
+    category: "frontend",
+    hidden: true,
+    features: [
+      "Algorithm visualization techniques",
+      "Customizable array size and sorting speed",
+      "Step-by-step execution view",
+      "Performance metrics and comparison"
+    ],
+    whatILearned: [
+      "Managing complex React state for visualizations",
+      "Deep understanding of sorting algorithms (Bubble, Merge, Quick, etc.)",
+      "Optimizing rendering performance during fast animations"
     ]
   },
   {

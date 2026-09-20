@@ -20,16 +20,16 @@ const cardVariants = {
 
 // Random texts
 const dragTexts = [
-  "Put me back!! 😤",
+  "Put me back!!",
   "Hey! Wrong place!",
-  "Careful… I belong there 👀",
+  "Careful… I belong there",
   "Oops! Not here!",
-  "Easy there, stranger 😅",
-  "Drag me home 🏠",
+  "Easy there, stranger",
+  "Drag me home",
   "Hey! I was comfy there!",
 ];
 
-const SkillCard = ({ name, src, isEdit = false }) => {
+const SkillCard = ({ name, src, IconComponent, isEdit = false }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [randomText, setRandomText] = useState("");
 
@@ -103,11 +103,15 @@ const SkillCard = ({ name, src, isEdit = false }) => {
 
       {/* ICONS */}
       <div className="relative flex items-center justify-center pointer-events-none">
-        <img
-          src={src}
-          alt={`${name} Icon`}
-          className="w-5 h-5 drop-shadow-sm rounded"
-        />
+        {src ? (
+          <img
+            src={src}
+            alt={`${name} Icon`}
+            className="w-5 h-5 drop-shadow-sm rounded"
+          />
+        ) : IconComponent ? (
+          <IconComponent className="w-5 h-5 drop-shadow-sm text-slate-700 dark:text-slate-300" />
+        ) : null}
       </div>
 
       {/* SKILL NAME */}
