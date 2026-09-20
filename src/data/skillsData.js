@@ -29,7 +29,7 @@ import {
 
 import {
   LuBrainCircuit, LuFileText, LuMessageSquare, LuMic,
-  LuAudioLines, LuPenTool, LuBarChart2, LuWorkflow
+  LuAudioLines, LuPenTool, LuChartBar, LuWorkflow
 } from "react-icons/lu";
 
 // SKILLS DATA
@@ -76,7 +76,7 @@ export const mlAiSkills = [
   { name: "wav2vec2", iconComponent: LuAudioLines },
   { name: "Prompt Engineering", iconComponent: LuPenTool },
   { name: "Document Extraction", iconComponent: LuFileText },
-  { name: "Model Evaluation", iconComponent: LuBarChart2 },
+  { name: "Model Evaluation", iconComponent: LuChartBar },
   { name: "Agentic Orchestration", iconComponent: LuBrainCircuit },
 ];
 
