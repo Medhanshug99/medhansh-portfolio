@@ -49,7 +49,7 @@ const Hero = () => {
         />
         <span
           data-tooltip-id="status"
-          data-tooltip-content="Open to full-time SWE/Full Stack roles"
+          data-tooltip-content="Open to internship / new-grad SWE and Full Stack roles"
           className="absolute right-2 top-21 md:right-2.5 md:top-24 h-3 w-3 rounded-full border border-neutral-700 bg-emerald-400 glow-green animate-pulse"
         ></span>
         <Tooltip
@@ -80,7 +80,7 @@ const Hero = () => {
           I build AI-integrated web applications that solve real problems, not just demo well. That's meant designing a document parsing engine with LayoutLMv3 and BullMQ to cut manual review time, and engineering a custom Alpha-Beta pruning chess AI from scratch because I wanted to understand search algorithms at a deeper level than a tutorial could teach me.
         </p>
         <p className="mt-3 font-medium text-[17px] text-gray-700 dark:text-gray-400 ">
-          I care about system architecture, performance under load, and shipping things that hold up outside a sandbox. Currently looking for full-time Full Stack or SWE roles where I can work on problems that are actually hard.
+          I care about system architecture, performance under load, and shipping things that hold up outside a sandbox. Currently seeking internship and new-grad Full Stack / SWE roles where I can work on problems that are actually hard.
         </p>
 
         {/* Location and Socials */}
