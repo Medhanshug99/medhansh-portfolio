@@ -10,7 +10,7 @@ export default function Footer() {
         <a href="https://x.com/Medhansh91303" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors">
           <FiTwitter size={20} />
         </a>
-        <a href="https://linkedin.com/in/medhanshpoojari" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors">
+        <a href="https://www.linkedin.com/in/medhansh-poojari-16b242200" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="hover:text-black dark:hover:text-white transition-colors">
           <FiLinkedin size={20} />
         </a>
       </div>
