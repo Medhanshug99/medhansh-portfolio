@@ -100,7 +100,7 @@ export const projectsData = [
     liveUrl: "https://vite-chess.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/chess-web",
     category: "frontend",
-    hidden: true,
+
     features: [
       "Custom browser-based chess engine",
       "Piece-Square Tables (PSTs) for positional evaluation",
@@ -121,7 +121,7 @@ export const projectsData = [
     liveUrl: "https://urban-roast-cafe-liart.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/urban-roast-cafe",
     category: "full-stack",
-    hidden: true,
+
     features: [
       "Modern, editorial, mobile-first responsive design",
       "Dynamic Menu fetched from MongoDB with instant client-side category filtering",
@@ -143,7 +143,7 @@ export const projectsData = [
     liveUrl: "https://mini-crm-mern-theta.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/FUTURE_FS_02",
     category: "full-stack",
-    hidden: true,
+
     features: [
       "Public lead generation form",
       "Secure admin dashboard with JWT authentication",
@@ -164,7 +164,7 @@ export const projectsData = [
     liveUrl: "https://digital-persona-simulator-01.vercel.app/",
     githubUrl: "https://github.com/Medhanshug99/digital-persona-simulator",
     category: "frontend",
-    hidden: true,
+
     features: [
       "Dynamic persona interaction",
       "Customizable personality traits",
